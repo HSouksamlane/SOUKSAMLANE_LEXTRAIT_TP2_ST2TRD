@@ -1,0 +1,136 @@
+﻿<Window x:Class="SOUKSAMLANE_LEXTRAIT_TP2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SOUKSAMLANE_LEXTRAIT_TP2"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="Encryptor_Decryptor WPF Application - TP2 SOUKSAMLANE_LEXTRAIT" Height="450" Width="540" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="DecodeButton" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#FFEE95"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="transparent"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <StackPanel Background="#FFB485">
+            <!--<Label Content="UncodeApp" FontSize="32" Width="326" HorizontalContentAlignment="Center"/>-->
+            <!--<Label Content="UncodeApp" FontSize="32" Width="326" HorizontalContentAlignment="Center"/>-->
+            <!--<Label Content="UncodeApp" FontSize="32" Width="326" HorizontalContentAlignment="Center"/>-->
+            <!--<Label Content="UncodeApp" FontSize="32" Width="326" HorizontalContentAlignment="Center"/>-->
+            <!--<Label Content="UncodeApp" FontSize="32" Width="326" HorizontalContentAlignment="Center"/>-->
+            <!--<Label Content="UncodeApp" FontSize="32" Width="326" HorizontalContentAlignment="Center"/>-->
+            <!--<Label Content="UncodeApp" FontSize="32" Width="326" HorizontalContentAlignment="Center"/>-->
+            <Image Width="Auto" Height="60" Source="code_decode_algorithms.png" HorizontalAlignment="Stretch" RenderTransformOrigin="1,1"/>
+            <Grid Height="35" Margin="12,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!--<Label Content="A" Grid.Column="0"></Label>-->
+                <Label x:Name="Result" Content="" Grid.Column="1" HorizontalAlignment="Center" />
+            </Grid>
+
+            <Grid Height="200" Margin="12,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="480"/>
+                </Grid.ColumnDefinitions>
+                <Grid Height="195" Margin="0,0,0,0" Background="Transparent" >
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="9.667"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="167"/>
+                        <ColumnDefinition Width="33"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBox x:Name="InputTextBox" Text="Please input here the text you want to encrypt/decrypt " Grid.Column="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Margin="10,0,70,0" Grid.ColumnSpan="2"  />
+                    <Image gif:ImageBehavior.AnimatedSource="animated_arrow.gif" Width="Auto" Grid.Column ="2" Height="195"  HorizontalAlignment="Stretch" RenderTransformOrigin="1,1" Margin="15,0,5,0" />
+                    <TextBox x:Name="OutputTextBox" Text="" Grid.Column="2" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="3" Margin="71,0,9,0"/>
+                </Grid>
+
+            </Grid>
+            <Grid x:Name="vigenere_keyBox" Visibility="Collapsed" Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Enter the Key :" Margin="30, 0"/>
+                <TextBox x:Name="vigenere_key" Grid.Column="1" Margin="30, 0" Height="20" Text="Mykey"/>
+            </Grid>
+            <Grid Height="40" Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="130.333"/>
+                    <ColumnDefinition Width="49.667"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ComboBox x:Name="EncryptionComboBox" Width="100" HorizontalAlignment="Center" SelectedIndex="0" Margin="30,8" SelectionChanged="ComboBox_Change">
+                    <ComboBoxItem Content="Caesar"/>
+                    <ComboBoxItem Content="Binary"/>
+                    <ComboBoxItem Content="Vigenere"/>
+                </ComboBox>
+                <CheckBox x:Name="ConvertCheckBox" Content="Decryption" Grid.Column="1" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Width="112" Click="Checkbox_Clic" Grid.ColumnSpan="2" Margin="34,10"/>
+                <Button x:Name="decodeButton" Grid.Column="3" Style="{DynamicResource DecodeButton}" Click="Button_Click" Background="#FF5757" Content="Encrypt !"  Margin="30,5" BorderBrush="Transparent"/>
+            </Grid>
+
+        </StackPanel>
+    </Grid>
+</Window>
+
