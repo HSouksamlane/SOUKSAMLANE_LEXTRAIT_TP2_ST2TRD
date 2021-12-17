@@ -2,14 +2,14 @@
 
 ## I. Project's informations
 
-### Autheurs :
+### Authors :
 
 <ol>
 <li>LEXTRAIT Hugo</li>
 <li>SOUKSAMLANE Hugo</li>
 </ol>
 
-<b> Date : </b> 17 december 2021 
+<b> Date : </b> December 17th 2021 
  
 ---
 
@@ -37,7 +37,7 @@ Our caesar encryption algorithm is an offset of 2.
 
 ---
 ### 2. Binary
-This algorithm encrypts your data in 8-bit binary. In case a non-8-bit number is entered our program will automatically format it into an 8-bit number. In this way the user input remains the same but the program understands your intentions.
+This algorithm encrypts your data in 8-bits format. In case a non-8-bit input is entered our program will automatically format it into an 8-bit values. In this way the user input remains the same but the program understands your intentions.
 
 Moreover, when decrypting a binary number, if the entered number does not correspond to a visible character of ASCII table, the program will express the error to the user. (I.e. all characters of the ASCII table less than 32 in decimal)
 
