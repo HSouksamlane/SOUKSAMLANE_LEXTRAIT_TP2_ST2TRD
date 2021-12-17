@@ -28,7 +28,7 @@ Of course, you have the possibility to do the exchange in both directions. Encry
 
 ## III. How to execute the app
 
-You just have to execute the SOUKSAMLANE_LEXTRAIT_TP2.exe.config file at the root of the project
+You just have to execute the <b>SOUKSAMLANE_LEXTRAIT_TP2.exe</b> file at the root of the project
 
 ## IV. Algorithms Informations 
 
