@@ -23,13 +23,13 @@ You have Three Algorithms available :
 <li>Binary</li>
 <li>Vigenere</li>
 </ol>
----
+
 Of course, you have the possibility to do the exchange in both directions. Encrypt your data and decrypt it !
 
 ## III. How to execute the app
 
 You just have to execute the SOUKSAMLANE_LEXTRAIT_TP2.exe.config file at the root of the project
----
+
 ## III. Algorithms Informations 
 
 ### Caesar 
