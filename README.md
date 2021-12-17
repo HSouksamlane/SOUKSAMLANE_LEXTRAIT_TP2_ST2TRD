@@ -1,6 +1,6 @@
 # SOUKSAMLANE_LEXTRAIT_TP2_TRADING
 
-## Solution Application Cryptage TP2
+## I. Project's informations
 
 ### Autheurs :
 
@@ -11,3 +11,14 @@
 
 <b> Date : </b> 17 december 2021 
  
+---
+
+## II. Purpose of the project
+
+The objective of this project is to provide an application capable of encrypting and decrypting your text data.
+
+
+## III. Algorithms
+
+
+
