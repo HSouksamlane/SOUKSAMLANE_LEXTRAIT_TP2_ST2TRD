@@ -55,7 +55,8 @@ We have implemented a gif using a Nugget package named WpfAniatedGif. This integ
 
 ---
 ### Custom Buttons
-We worked on the design of a button with rounded edges, and a hover that changes color so that the button integrates most closely with our design work
+You will notice that the button text changes depending on whether we want to encrypt or decrypt our data.
+Also, we worked on the design of a button with rounded edges, and a hover that changes color so that the button integrates most closely with our design work
 
 ---
 
