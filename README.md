@@ -30,8 +30,35 @@ Of course, you have the possibility to do the exchange in both directions. Encry
 
 You just have to execute the SOUKSAMLANE_LEXTRAIT_TP2.exe.config file at the root of the project
 
-## III. Algorithms Informations 
+## IV. Algorithms Informations 
 
-### Caesar 
+### 1. Caesar 
 Our caesar encryption algorithm is an offset of 2.
 
+---
+### 2. Binary
+This algorithm encrypts your data in 8-bit binary. In case a non-8-bit number is entered our program will automatically format it into an 8-bit number. In this way the user input remains the same but the program understands your intentions.
+
+Moreover, when decrypting a binary number, if the entered number does not correspond to a visible character of ASCII table, the program will express the error to the user. (I.e. all characters of the ASCII table less than 32 in decimal)
+
+---
+### 3. Vigenere
+
+For Vigenere, we used an encryption using the Vigenere Cypher table to encrypte and decrypt your data. When selecting the Vigenere algorithm, you will notice that a box appears. This is because the encryption is done using a key. 
+
+Also, we have allowed entries that correspond to the entire alphabet from "A" to "Z". Capital letters are treated and do not matter in the key or in the text.
+
+## V. More features
+
+### Gif
+We have implemented a gif using a Nugget package named WpfAniatedGif. This integration makes the front end interface dynamic :)
+
+---
+### Custom Buttons
+We worked on the design of a button with rounded edges, and a hover that changes color so that the button integrates most closely with our design work
+
+---
+
+<b>We hope you like our work :)</b>
+
+## Hugo² team 
